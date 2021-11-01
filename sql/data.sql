@@ -10,3 +10,9 @@ VALUES
 (1, 2),
 (3, 2),
 (1, 3);
+
+INSERT INTO publications (title, content, created_id)
+VALUES
+("Pulicacao 1", "Conteudo 1", 1),
+("Pulicacao 2", "Conteudo 2", 2),
+("Pulicacao 3", "Conteudo 3", 3);

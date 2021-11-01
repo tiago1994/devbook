@@ -66,6 +66,5 @@ func returnKey(token *jwt.Token) (interface{}, error) {
 	if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 		return nil, fmt.Errorf("wrong signature method %v", token.Header["alg"])
 	}
-
 	return config.SecretKey, nil
 }

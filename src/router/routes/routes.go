@@ -17,6 +17,8 @@ type Route struct {
 func Configuration(r *mux.Router) *mux.Router {
 	routes := userRoutes
 	routes = append(routes, loginRoutes)
+	routes = append(routes, publicationRoutes...)
+
 	for _, route := range routes {
 		if route.IsPrivate {
 			r.HandleFunc(route.URI, middlewares.Logger(middlewares.Authenticate(route.Function))).Methods(route.Method)
